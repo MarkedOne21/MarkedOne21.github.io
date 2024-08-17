@@ -1,17 +1,29 @@
 ---
 import "@/styles/globals.css";
-import Header from "@/components/header.tsx";
 ---
 
-<html lang="en">
+<html class="dark" lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="/favicon.jpg" type="image/jpeg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>MarkedOne - Portfolio</title>
+		<title>MarkedOne</title>
 	</head>
-	<body>
-		<Header />
+	<body class="w-screen h-screen">
+		<div class="grid grid-rows-[auto,1fr,1fr] h-full">
+			<div class="h-16 border-b border-secondary">Socials</div>
+			<div class="grid grid-cols-2 border-b border-secondary">
+				<div class="border-r border-secondary">Img/Video</div>
+				<div class="grid grid-rows-[2fr,1fr] h-full">
+					<div class="border-b border-secondary">Description</div>
+					<div>Skills</div>
+				</div>
+			</div>
+			<div class="grid grid-cols-2 border-b border-secondary">
+				<div class="border-r border-secondary">Profile picture</div>
+				<div>Description</div>
+			</div>
+		</div>
 	</body>
 </html>
