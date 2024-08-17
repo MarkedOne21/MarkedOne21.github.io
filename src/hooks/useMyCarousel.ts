@@ -4,16 +4,11 @@ import PerfumePNG from "../assets/perfume.png";
 import HousePNG from "../assets/house.jpg";
 import PBRPNG from "../assets/pbr.png";
 
-type MyCarouselDataItemSkill = {
-  id: string;
-  label: string;
-};
-
 type MyCarouselDataItem = {
   id: string;
   media: string;
   title: string;
-  skills: MyCarouselDataItemSkill[];
+  description: string;
 };
 
 type MyCarouselData = {
@@ -25,43 +20,28 @@ export default (): MyCarouselData => {
     items: [
       {
         media: GoosePNG.src,
-        title: "Hydra Goose",
-        skills: ["3D Modeling", "Sculpting"].map((label) => ({
-          id: crypto.randomUUID().toString(),
-          label,
-        })),
+        title: "Goose",
+        description: "3D Modelling and Sculpting",
       },
       {
         media: SchytePNG.src,
-        title: "Schyte",
-        skills: ["Texturing", "UV Mapping"].map((label) => ({
-          id: crypto.randomUUID().toString(),
-          label,
-        })),
+        title: "Scythe",
+        description: "UV Mapping and Unwrapping",
       },
       {
         media: PerfumePNG.src,
         title: "Perfume",
-        skills: ["Blender", "ZBrush"].map((label) => ({
-          id: crypto.randomUUID().toString(),
-          label,
-        })),
+        description: "Substance Painter and Photoshop",
       },
       {
         media: HousePNG.src,
         title: "House",
-        skills: ["Substance Painter", "Photoshop"].map((label) => ({
-          id: crypto.randomUUID().toString(),
-          label,
-        })),
+        description: "Blender and ZBrush",
       },
       {
         media: PBRPNG.src,
         title: "PBR",
-        skills: ["PBR Workflows"].map((label) => ({
-          id: crypto.randomUUID().toString(),
-          label,
-        })),
+        description: "Knowledge of PBR Workflows",
       },
     ].map((item) => ({ ...item, id: crypto.randomUUID().toString() })),
   };

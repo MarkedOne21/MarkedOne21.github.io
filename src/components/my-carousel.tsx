@@ -30,54 +30,8 @@ export default (): React.ReactElement => {
                 src={item.media}
                 alt={item.title}
               />
-              <div className="grid grid-cols-2 p-4">
-                <div
-                  className={cn({
-                    "place-self-center": width > 768,
-                  })}
-                >
-                  <div className="grid">
-                    <p
-                      className={cn({
-                        "text-xl": true,
-                        "place-self-center": width > 768,
-                      })}
-                    >
-                      Title:
-                    </p>
-                    <p
-                      className={cn({
-                        "text-md": true,
-                        "place-self-center": width > 768,
-                      })}
-                    >
-                      {item.title}
-                    </p>
-                  </div>
-                </div>
-                <div
-                  className={cn({
-                    "place-self-center": width > 768,
-                  })}
-                >
-                  <div className="grid">
-                    <p
-                      className={cn({
-                        "text-xl": true,
-                        "place-self-center": width > 768,
-                      })}
-                    >
-                      Skills:
-                    </p>
-                    <ul className="grid">
-                      {item.skills.map((skill) => (
-                        <li key={skill.id} className="text-md">
-                          - {skill.label}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
+              <div className="grid p-4">
+                <p className="place-self-center text-2xl">{item.description}</p>
               </div>
             </CarouselItem>
           ))}
