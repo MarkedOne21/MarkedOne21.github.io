@@ -1,5 +1,6 @@
 ---
 import Socials from "@/components/socials";
+import MyCarousel from "@/components/my-carousel";
 import "@/styles/globals.css";
 ---
 
@@ -14,13 +15,7 @@ import "@/styles/globals.css";
   <body class="w-screen h-screen">
     <div class="grid grid-rows-[auto,1fr,1fr] h-full">
       <Socials client:only="react" />
-      <div class="grid grid-cols-2 border-b border-secondary">
-        <div class="border-r border-secondary">Img/Video</div>
-        <div class="grid grid-rows-[2fr,1fr] h-full">
-          <div class="border-b border-secondary">Description</div>
-          <div>Skills</div>
-        </div>
-      </div>
+      <MyCarousel client:only="react" />
       <div class="grid grid-cols-2 border-b border-secondary">
         <div class="border-r border-secondary">Profile picture</div>
         <div>Description</div>

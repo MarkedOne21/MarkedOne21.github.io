@@ -17,7 +17,7 @@ export default (): React.ReactElement => {
   const { width } = useScreen();
 
   return (
-    <div className="grid h-16 p-2">
+    <div className="grid h-16 p-2 z-10">
       {isHidden && (
         <div className="place-self-center">
           <Button
@@ -33,10 +33,9 @@ export default (): React.ReactElement => {
       )}
       <div className="p-2 place-self-center">
         {!isHidden && (
-          // <div className="border-2 border-secondary place-self-center rounded-full p-2 overflow-x-scroll whitespace-nowrap no-scrollbar">
           <div
             className={cn({
-              "border-2 border-secondary place-self-center rounded-full p-2 ":
+              "border-2 border-secondary place-self-center rounded-full p-2 bg-background":
                 true,
               "w-96 overflow-x-scroll whitespace-nowrap no-scrollbar":
                 width < 768,
