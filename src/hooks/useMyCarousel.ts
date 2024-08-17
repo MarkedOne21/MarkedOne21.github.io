@@ -1,4 +1,4 @@
-import GoosePNG from "../assets/goose.png";
+import GooseJPEG from "../assets/goose.jpeg";
 import SchytePNG from "../assets/schyte.png";
 import PerfumePNG from "../assets/perfume.png";
 import HousePNG from "../assets/house.jpg";
@@ -19,7 +19,7 @@ export default (): MyCarouselData => {
   return {
     items: [
       {
-        media: GoosePNG.src,
+        media: GooseJPEG.src,
         title: "Goose",
         description: "3D Modelling and Sculpting",
       },
