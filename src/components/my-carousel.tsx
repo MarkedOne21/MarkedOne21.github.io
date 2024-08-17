@@ -24,20 +24,22 @@ export default (): React.ReactElement => {
       >
         <CarouselContent>
           {items.map((item) => (
-            <CarouselItem className="grid" key={item.id}>
-              <img
-                className="h-96 w-96 place-self-center object-cover"
-                src={item.media}
-                alt={item.title}
-              />
-              <div className="grid p-4">
-                <p className="place-self-center text-2xl">{item.description}</p>
+            <CarouselItem key={item.id}>
+              <div className="flex justify-center">
+                <img
+                  className="w-96 h-96 object-cover"
+                  src={item.media}
+                  alt={item.title}
+                />
               </div>
+              <p className="mt-4 mb-4 flex justify-center">
+                {item.description}
+              </p>
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className="place-self-center" />
+        <CarouselNext className="place-self-center" />
       </Carousel>
     </div>
   );
