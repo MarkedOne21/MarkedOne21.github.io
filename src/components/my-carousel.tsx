@@ -19,7 +19,7 @@ export default (): React.ReactElement => {
         className={cn({
           "place-self-center": true,
           "w-[85%]": width > 768,
-          "w-[70%]": width < 768,
+          "w-[70%] mt-12": width < 768,
         })}
       >
         <CarouselContent>
