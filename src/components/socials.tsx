@@ -17,7 +17,7 @@ export default (): React.ReactElement => {
   const { width } = useScreen();
 
   return (
-    <div className="grid h-16 p-2 z-10">
+    <div className="grid h-32 p-2 z-10">
       {isHidden && (
         <div className="place-self-center">
           <Button
@@ -57,9 +57,7 @@ export default (): React.ReactElement => {
                       className="w-6 h-6 rounded-full"
                     />
                   ) : (
-                    <React.Fragment>
-                      <socialItem.icon color="white" />
-                    </React.Fragment>
+                    <socialItem.icon color="white" />
                   )}
                 </Button>
               </React.Fragment>

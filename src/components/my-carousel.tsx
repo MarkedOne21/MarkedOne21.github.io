@@ -18,7 +18,7 @@ export default (): React.ReactElement => {
       <Carousel
         className={cn({
           "place-self-center": true,
-          "w-[90%]": width > 768,
+          "w-[85%]": width > 768,
           "w-[70%]": width < 768,
         })}
       >
@@ -27,12 +27,17 @@ export default (): React.ReactElement => {
             <CarouselItem key={item.id}>
               <div className="flex justify-center">
                 <img
-                  className="w-96 h-96 object-cover"
+                  // className="w-[48rem] h-[48rem] object-cover"
+                  className={cn({
+                    "object-cover": true,
+                    "w-[48rem] h-[48rem]": width > 768,
+                    "w-96 h-96": width < 768,
+                  })}
                   src={item.media}
                   alt={item.title}
                 />
               </div>
-              <p className="mt-4 mb-4 flex justify-center">
+              <p className="mt-4 mb-4 flex justify-center font-inter">
                 {item.description}
               </p>
             </CarouselItem>

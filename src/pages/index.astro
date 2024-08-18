@@ -1,6 +1,5 @@
 ---
-import Socials from "@/components/socials";
-import MyCarousel from "@/components/my-carousel";
+import Home from "@/components/home.tsx";
 import "@/styles/globals.css";
 ---
 
@@ -10,16 +9,9 @@ import "@/styles/globals.css";
     <link rel="icon" href="/favicon.jpg" type="image/jpeg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>MarkedOne</title>
+    <title>Alexandru Groza -- Portfolio</title>
   </head>
   <body class="w-screen h-screen">
-    <div class="grid grid-rows-[auto,1fr,1fr] h-full">
-      <Socials client:only="react" />
-      <MyCarousel client:only="react" />
-      <div class="grid grid-cols-2 border-b border-secondary">
-        <div class="border-r border-secondary">Profile picture</div>
-        <div>Description</div>
-      </div>
-    </div>
+    <Home client:only="react" />
   </body>
 </html>
