@@ -3,6 +3,8 @@ import SchytePNG from "../assets/schyte.png";
 import PerfumePNG from "../assets/perfume.png";
 import HousePNG from "../assets/house.jpg";
 import PBRPNG from "../assets/pbr.png";
+import GooseGIF from "../assets/goose.gif";
+import SPPGIF from "../assets/spp.gif";
 
 type MyCarouselDataItem = {
   id: string;
@@ -19,9 +21,19 @@ export default (): MyCarouselData => {
   return {
     items: [
       {
+        media: GooseGIF.src,
+        title: "Goose",
+        description: "3D Modelling and Sculpting (Video)",
+      },
+      {
         media: GooseJPEG.src,
         title: "Goose",
-        description: "3D Modelling and Sculpting",
+        description: "3D Modelling and Sculpting (Image)",
+      },
+      {
+        media: SPPGIF.src,
+        title: "Redresour Advertising",
+        description: "Animation and Rigging",
       },
       {
         media: SchytePNG.src,

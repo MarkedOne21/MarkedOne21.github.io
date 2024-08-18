@@ -27,7 +27,6 @@ export default (): React.ReactElement => {
             <CarouselItem key={item.id}>
               <div className="flex justify-center">
                 <img
-                  // className="w-[48rem] h-[48rem] object-cover"
                   className={cn({
                     "object-cover": true,
                     "w-[48rem] h-[48rem]": width > 768,
