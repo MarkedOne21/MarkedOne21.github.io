@@ -3,7 +3,7 @@ import Socials from "./socials";
 
 export default (): React.ReactElement => {
   return (
-    <div className="relative grid grid-rows-[auto,1fr] h-full">
+    <div style={{display: 'flex', flexDirection: 'column'}}>
       <Socials />
       <About />
     </div>
